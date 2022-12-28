@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <h1>Hey! Just check here what's going on !!😏</h1>
+
+        <ul>
+            {% for post in object_list %}
+            <li>{{ post.text }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
