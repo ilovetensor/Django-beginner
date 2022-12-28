@@ -1,0 +1,43 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+<div class="question_table">
+
+
+<form action="{% url 'polls:vote' question.id %}" method="post">
+{% csrf_token %}
+<!-- ----------- -->
+<fieldset>
+
+    <legend class="question_heading">{{question.question_text}}</legend>
+
+    {% if error_message %}<p class="error_message"><strong>{{error_message}}</strong></p>
+    {%endif%}
+
+    <div class="items_list">
+    {% for choice in question.choice_set.all %}
+    <div class="items">
+        <input class="item_checkbox" type="radio" name="choice" id="choice{{forloop.counter}}" value="{{choice.id}}">
+        <label class="item_label" for="choice{{forloop.counter}}">{{choice.choice_text}}</label><br>
+        </div>
+    {% endfor %}
+    </div>
+
+</fieldset>
+<!-- ------------ -->
+<input type="submit" value="Vote" class="submit_button">
+</form>
+
+
+</body>
+</html>
