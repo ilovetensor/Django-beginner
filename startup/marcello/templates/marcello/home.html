@@ -1,0 +1,177 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'marcello/style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <title>🍕 Marcello</title>
+    <script src="{% static 'marcello/main.js' %}" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="main-logo">
+            <img class="main-logo-img" src="{% static 'marcello/logo.png' %}" >
+      
+        </div>
+        <div class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-items"> <button class="navbar-buttons">About Us</button></li>
+                <li class="navbar-items"> <button class="navbar-buttons">Our Centers</button></li>
+                <li class="navbar-items"> <button class="navbar-buttons">Pricings</button></li>        
+                <li class="navbar-items"> <button class="navbar-buttons">Customer Care</button></li>
+                <li class="navbar-items"> <button class="navbar-buttons">Login</button></li>
+                <li class="navbar-menu"><button class="navbar-menu-button" id="menu-button"><i class="bi bi-list"></i></button></li>
+                <li class="navbar-close"><button class="navbar-close-button" ><i class="bi bi-x-square"></i></i></button></li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="image-pannel">
+        <div class="mySlides"><img src="{% static 'marcello/pizza.jpg'%}" alt=""><div class="text">
+            <!-- no text for this -->
+        </div> </div>
+        <div class="mySlides"><img src="{% static 'marcello/pizza3.jpg'%}" alt=""><div class="text">
+            Free Delievery Charges <br>
+            Order Today !   
+        </div></div>
+    </div>
+        
+    <!-- the main body  -->
+    <div class="products">
+        <h2 class="section-heading"> Recommended </h2>
+        <section class="sections">
+            <article class="food-items-container">
+                <a href="/" class="item-image-link"><img class="item-image" src="{% static 'marcello/margherita.jpg'%}" alt=""></a>
+                <div class="food-items-details">
+                    <div class="title-ingredients">
+                        <div class="item-title"><a href="/" class="item-title-link">Margherita</a></div>
+                        <div class="item-ingredients"> Chees, Spiced Paneer, Mushroom, Onion, Sweet Corn</div>
+                    </div>
+                    <div class="item-modify">
+                        <div class="selection-title">Select your size & crust</div>
+                        <select name="size" class="pizza-size">
+                            <option class="size-options">Small Pan</option>
+                            <option class="size-options">Medium Pan</option>
+                            <option class="size-options">Large Pan</option>
+                        </select>
+                        <button type="submit" class="add-item-button">
+                            Add <div class="item-price">Rs 599</div>
+                        </button>
+                    </div>
+                </div> 
+            </article>
+            <article class="food-items-container">
+                <a href="/" class="item-image-link"><img class="item-image" src="{% static 'marcello/ChickenTikka.jpg'%}" alt=""></a>
+                <div class="food-items-details">
+                    <div class="title-ingredients">
+                        <div class="item-title"><a href="/" class="item-title-link">Chicken Tikka</a></div>
+                        <div class="item-ingredients"> Chees, Spiced Paneer, Mushroom, Onion, Sweet Corn</div>
+                    </div>
+                    <div class="item-modify">
+                        <div class="selection-title">Select your size & crust</div>
+                        <select name="size" class="pizza-size">
+                            <option class="size-options">Small Pan</option>
+                            <option class="size-options">Medium Pan</option>
+                            <option class="size-options">Large Pan</option>
+                        </select>
+                        <button type="submit" class="add-item-button">
+                            Add <div class="item-price">Rs 399</div>
+                        </button>
+                    </div>
+                </div> 
+            </article>
+            <article class="food-items-container">
+                <a href="/" class="item-image-link"><img class="item-image" src="{% static 'marcello/DoublePaneerSupreme.jpg'%}" alt=""></a>
+                <div class="food-items-details">
+                    <div class="title-ingredients">
+                        <div class="item-title"><a href="/" class="item-title-link">Double Paneer Supreme</a></div>
+                        <div class="item-ingredients"> Chees, Spiced Paneer, Mushroom, Onion, Sweet Corn</div>
+                    </div>
+                    <div class="item-modify">
+                        <div class="selection-title">Select your size & crust</div>
+                        <select name="size" class="pizza-size">
+                            <option class="size-options">Small Pan</option>
+                            <option class="size-options">Medium Pan</option>
+                            <option class="size-options">Large Pan</option>
+                        </select>
+                        <button type="submit" class="add-item-button">
+                            Add <div class="item-price">Rs 599</div>
+                        </button>
+                    </div>
+                </div> 
+            </article>
+            <article class="food-items-container">
+                <a href="/" class="item-image-link"><img class="item-image" src="{% static 'marcello/DoublePaneerSupreme.jpg'%}" alt=""></a>
+                <div class="food-items-details">
+                    <div class="title-ingredients">
+                        <div class="item-title"><a href="/" class="item-title-link">Double Paneer Supreme</a></div>
+                        <div class="item-ingredients"> Chees, Spiced Paneer, Mushroom, Onion, Sweet Corn</div>
+                    </div>
+                    <div class="item-modify">
+                        <div class="selection-title">Select your size & crust</div>
+                        <select name="size" class="pizza-size">
+                            <option class="size-options">Small Pan</option>
+                            <option class="size-options">Medium Pan</option>
+                            <option class="size-options">Large Pan</option>
+                        </select>
+                        <button type="submit" class="add-item-button">
+                            Add <div class="item-price">Rs 599</div>
+                        </button>
+                    </div>
+                </div> 
+            </article>
+            <article class="food-items-container">
+                <a href="/" class="item-image-link"><img class="item-image" src="{% static 'marcello/TandooriPaneer.jpg'%}" alt=""></a>
+                <div class="food-items-details">
+                    <div class="title-ingredients">
+                        <div class="item-title"><a href="/" class="item-title-link">Tandoori Paneer</a></div>
+                        <div class="item-ingredients"> Chees, Spiced Paneer, Mushroom, Onion, Sweet Corn</div>
+                    </div>
+                    <div class="item-modify">
+                        <div class="selection-title">Select your size & crust</div>
+                        <select name="size" class="pizza-size">
+                            <option class="size-options">Small Pan</option>
+                            <option class="size-options">Medium Pan</option>
+                            <option class="size-options">Large Pan</option>
+                        </select>
+                        <button type="submit" class="add-item-button">
+                            Add <div class="item-price">Rs 599</div>
+                        </button>
+                    </div>
+                </div> 
+            </article>
+            <article class="food-items-container">
+                <a href="/" class="item-image-link"><img class="item-image" src="{% static 'marcello/VeggieSupreme.jpg'%}" alt=""></a>
+                <div class="food-items-details">
+                    <div class="title-ingredients">
+                        <div class="item-title"><a href="/" class="item-title-link">Veggie Supreme</a></div>
+                        <div class="item-ingredients"> Chees, Spiced Paneer, Mushroom, Onion, Sweet Corn</div>
+                    </div>
+                    <div class="item-modify">
+                        <div class="selection-title">Select your size & crust</div>
+                        <select name="size" class="pizza-size">
+                            <option class="size-options">Small Pan</option>
+                            <option class="size-options">Medium Pan</option>
+                            <option class="size-options">Large Pan</option>
+                        </select>
+                        <button type="submit" class="add-item-button">
+                            Add <div class="item-price">Rs 599</div>
+                        </button>
+                    </div>
+                </div> 
+            </article>
+
+        </section>
+    </div>
+
+</body>
+</html>
+<!-- <img src="https://source.unsplash.com/random/990x356/?pizza/?gravity='center"> -->

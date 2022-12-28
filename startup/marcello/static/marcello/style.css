@@ -1,0 +1,271 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+
+body{
+    
+    height: 100%;
+    font-family: 'Caveat', cursive;
+    font-size: .6rem;
+}
+
+.header{
+    display: flex;
+    height: 70px;
+    background-color: black;
+    justify-content: space-between;
+}
+
+img.main-logo-img{
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 40px;
+    position: absolute;
+    background-color: #f75845;
+    z-index: 1;
+}
+
+.navbar{
+    width: 60%;
+}
+
+.navbar-list{
+    display: flex;
+    vertical-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding-left: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navbar-items{
+    list-style: none;   
+}    
+
+.navbar-buttons{
+    border: none;
+    border-radius: 2px;
+    background-color: #000000;
+    color: white;
+    padding: 5px 11px;
+    font-weight: bolder;
+
+}
+.navbar-buttons:hover{
+    background-color: #f75845;
+}
+.navbar-buttons:active{
+    color: #373737;
+}
+
+.navbar-close{
+    display: none;
+}
+
+.navbar-menu button{
+    border: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    padding: 2px;
+    font-size: 1rem;
+    border-radius: 2px;
+    background-color: #373737;
+}
+.navbar-menu{
+    display: none;
+}
+
+/* Building Image Pannel with animation */
+@keyframes fade{
+    from{ opacity: .5;}
+    to{ opacity: 1;}
+}
+img .mySlides{
+    animation-name: fade;
+    animation-duration: 1500ms;
+}
+
+.image-pannel img {
+    width: 100%;
+}
+
+
+.text{
+    position: relative;
+    height: 0px;
+    width: 50%;
+    top: -24vw;
+    left: 12vw;
+    font-size: 4vw;
+    color: #ffc600;
+    font-weight: bolder;
+}
+
+
+.mySlides{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* Making it a bit responsive */
+
+@media only screen and (max-width : 992px){
+    .navbar-menu button:active{
+        background-color: #f75845;
+    }
+    .navbar-list .navbar-items{
+        display: none;
+    }
+    .navbar-list{
+        align-items: right;
+    }
+    img.main-logo-img{
+        width: 52px;
+        margin-top: 4px;
+        margin-left: 4px;
+        z-index: 3;
+        position: absolute;
+    }
+    .navbar-menu{
+        display: block;
+        right: 30px;
+        position: absolute;
+    }
+    .header{
+        height: 60px;
+    }
+    .navbar-list-visible .navbar-close{
+        display: block;
+        position: absolute;
+        right: 20px;
+        z-index: 4;
+        top: 20px;
+    }
+
+}
+
+/* Transformiing the header options to slider menu */
+
+.navbar-list-visible .navbar-menu{
+    display: none;
+}
+.navbar-list-visible{
+    z-index: 2;
+    width: 100%;
+    height: max-content;
+    flex-direction: column;
+    margin: 0px;
+    left: 0px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 85px;
+}
+.navbar-list-visible .navbar-items .navbar-buttons{
+    background-color: transparent;
+    font-weight: 700;
+    align-self: right;
+    
+}
+.navbar-list-visible .navbar-items .navbar-buttons:active{
+    color: #373737;
+}
+.navbar-list-visible .navbar-close button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 0px; 
+    position: absolute;
+    top: 2px;
+    right: 20px;
+}
+.navbar-list-visible .navbar-close button:active{
+    color: #373737;
+}
+
+/* ========================================================================================================================== */
+/* ========================================================================================================================== */
+.section-heading{
+    text-align: center;
+    font-size: 3rem;
+    padding: 1vw 0px;
+    margin: 0px;
+    margin-top: 10px;
+    font-weight: 900;
+    border: 2px 2px solid black;
+}
+.sections{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    
+}
+.food-items-container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 11px;
+    box-shadow: 4px 4px 2px grey; 
+    /* max-width: 350px;    */
+    margin: 25px 15px;
+}
+.item-image{
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    width: 100%;
+    
+}
+.food-items-details{
+    font-size: 1rem;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    padding-bottom: 20px;
+    height: 100%;
+    justify-content: space-between;
+}
+.title-ingredients{
+    padding: 10px 0px;
+}
+.item-title-link{
+    text-decoration: none;
+}
+.item-title{
+    font-size: 2rem;
+    font-weight: bolder;
+
+    padding: 10px 0px;
+}
+.selection-title{
+    font-size: 2rem;
+    padding: 10px 0px;
+    font-weight: bolder;
+    margin: 0px;
+}
+.item-modify{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+}
+.pizza-size{
+    box-shadow: none;
+    border: none;
+    padding: 10px 20px;
+    background-color: #ffc600;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+.add-item-button{
+    background-color: #f75845;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    margin-top: 10px;
+    justify-content: space-between;
+    color: rgb(162, 32, 32);
+    font-weight: bolder;
+}
+
