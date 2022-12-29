@@ -13,6 +13,8 @@
                 {% endif %}
                 <h2>{{ object.title }}</h2>
                 <p>{{ object.body|linebreaksbr }}</p>
+                <a href="{% url 'post_update' pk=object.pk %}">✏️ Edit Post</a>
+                <a href="{% url 'post_delete' pk=object.pk %}">❌ Delete Post</a>
             </article>
         {% endblock %}
     </body>
