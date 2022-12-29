@@ -1,8 +1,11 @@
 <html>
     <body>
-        <header><h1>Happy Blogger 📝</h1></header>
+        <header>
+            <h1> <a href="{% url 'home' %}">Blogger</a> 📝</h1>
+            <a href="{% url 'post_new' %}">+ new post</a>
+            
+        </header>
         {% block content %}
-
         {% endblock %}
         <footer>
             <p>We are always ready to help you... contact us at our mail: <a href="google.com">bloger@gmail.com</a></p>
