@@ -9,7 +9,7 @@ class HomePageBlogs(ListView):
     template_name = 'home.html'
     
 
-# def DetailsPage(request, pk):
+# def DetailsPage(rquest, pk):
 #     post = get_object_or_404(Post, pk=pk)
 #     return render(request, 'details.html', {'post': post})
 
@@ -31,3 +31,4 @@ class DeletePost(DeleteView):
     model = Post
     template_name = 'delete.html'
     success_url = reverse_lazy('home')
+    
