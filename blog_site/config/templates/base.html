@@ -1,11 +1,16 @@
 <html>
     <body>
-        <header>
-            <h1> <a href="{% url 'home' %}">Blogger</a> 📝</h1>
+            <h3> <a href="{% url 'home' %}">Blogger</a> 📝</h3>
             <a href="{% url 'post_new' %}">+ new post</a>
-            
-        </header>
+            {% if user.is_authenticated %}
+                <p>Hi {{ user.username }}</p>
+                <p><a href="{% url 'logout'%}">LogOut</a></p>
+            {% else %}
+                <p>You are not logged in <a href="{% url 'login'%}">Log In</a> </p>
+            {% endif %}
+
         {% block content %}
+        
         {% endblock %}
         <footer>
             <p>We are always ready to help you... contact us at our mail: <a href="google.com">bloger@gmail.com</a></p>
