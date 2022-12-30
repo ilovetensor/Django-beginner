@@ -1,20 +1,57 @@
-<html>
-    <body>
-            <h3> <a href="{% url 'home' %}">Blogger</a> 📝</h3>
-            <a href="{% url 'post_new' %}">+ new post</a>
-            {% if user.is_authenticated %}
-                <p>Hi {{ user.username }}</p>
-                <p><a href="{% url 'logout'%}">LogOut</a></p>
-            {% else %}
-                <p>You are not logged in <a href="{% url 'login'%}">Log In</a> </p>
-            {% endif %}
+{% load static %}
 
-        {% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <title>~Whistles~</title>
+</head>
+    <body>
         
-        {% endblock %}
-        <footer>
-            <p>We are always ready to help you... contact us at our mail: <a href="google.com">bloger@gmail.com</a></p>
-            <i>This is the end of the page. 📃🔚</i>
-        </footer>
+        
+
+        <div class="logo"> 
+            <a href="{% url 'home' %}">Whistles 🩴</a> 
+        </div>
+        <div class="user_remainder">
+            {% if user.is_authenticated %}
+                <p class="user_status_data">Hi {{ user.username }} 💐  </p>
+            {% else %}
+                <p class="user_status_data">You are not logged in 😶 </p>
+            {% endif %}
+        </div>
+        <div class="header">
+            <div class="new_post">
+                <a href="{% url 'post_new' %}">+ new post</a>
+            </div>
+
+            <div class="user_status">
+                {% if user.is_authenticated %}
+                    <p><a href="{% url 'logout'%}">LogOut</a></p>
+                {% else %}
+                    <p><a href="{% url 'login'%}">Log In</a> </p>
+                {% endif %}
+            </div>
+            <div class="signup">
+                {% if user.is_authenticated %}
+                {% else %}
+                    <p><a href="{% url 'signup'%}">Sign Up</a> </p>
+                {% endif %}
+            </div>
+        </div>
+    
+    {% block content %}
+
+    {% endblock %}
+    <div class="footer">
+        <p>We are always ready to help you... contact us at our mail: <a href="google.com">bloger@gmail.com</a></p>
+    </div>
+
     </body>
+
 </html>
+
+
+

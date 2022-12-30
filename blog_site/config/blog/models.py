@@ -10,7 +10,7 @@ class Post(models.Model):
     body = models.TextField()
     date = models.DateTimeField(default=datetime.now)
     def sample(self):
-        return self.body[:100]
+        return self.body[:500]
     def __str__(self):
         return self.title
     def get_absolute_url(self):

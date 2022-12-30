@@ -1,19 +1,19 @@
-<html>
-    {% extends 'base.html' %}
-    {% block content %}
-    <body>
-        <ul>
-            {% for post in object_list %}
-            <div class="blog_item">
-                <h3><a href="{% url 'details' pk=post.pk %}">{{post.title}}</a></h3>
-                <p>
-                    {{ post.sample }} ... 
-                    <i>click to read more</i>
-                </p>
-                <hr>
-            </div>
-            {% endfor %}
-        </ul>
-    </body>
-    {% endblock %}
-</html>
+
+{% extends 'base.html' %}
+{% block content %}
+        <div class="home_page">
+            <ul class="blog_list">
+                {% for post in object_list %}
+                <div class="blog_item">
+                    <h3><a href="{% url 'details' pk=post.pk %}">{{post.title}}</a></h3>
+                    <p>
+                        {{ post.sample }} ... 
+                    <i class="read_more"><a href="{% url 'details' pk=post.pk %}">read more</a></i>
+                    </p>
+                    
+                </div>
+                {% endfor %}
+            </ul>
+        </div>
+{% endblock %}
+

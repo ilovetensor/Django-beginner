@@ -1,0 +1,203 @@
+body {
+    margin: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-width:550px
+}
+a{
+    text-decoration: none;
+    
+}
+.logo a {
+    text-decoration: none;
+    color: #ffc600;
+}
+
+.header a {
+    text-decoration: none;
+    color: #ffc600;
+}
+.header {
+    display: flex;
+    justify-content: right;
+    background-color: rgb(0, 0, 0);
+    color: #ffc600;
+    height: 85px;
+    align-items: center;
+    min-width: none;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+
+}
+.header div{
+    padding-right: 20px;
+}
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 4px;
+    padding-left: 30px;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    min-width: 190px;
+    z-index: 2;
+    border: 2px solid #ffc600;
+
+}
+.logo a:hover{
+    color: rgb(0, 187, 255);
+}
+.logo a:active{
+    color: grey;
+}
+.user_remainder{
+    background-color: rgba(255, 168, 190, 0.8);
+    color: rgb(255, 0, 106);
+    font-weight: 700;
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 12px;
+    border-bottom: 2px solid rgba(197, 51, 255, 0.9);
+    padding: 0px 20px;
+}
+.user_status_data{
+    margin: 0px;
+}
+.footer{
+    padding: 30px;
+    background-color: black;
+    color: #ffc600;
+}
+
+/* ------------Home Page CSS-------- */
+.home_page{
+    min-height: 900px;
+}
+
+.blog_list {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.blog_item{
+    border: 1px solid grey;
+    border-radius: 6px;
+    margin: 10px;
+    padding: 10px 20px;
+}
+.blog_item a{
+    text-decoration: none;
+    color: rgb(14, 112, 240);
+}
+.read_more{
+    color: rgb(14, 112, 240);
+}
+
+/*-------------- Details Page CSS -----------*/
+.blog_content{
+    /* max-width: 750px;
+    min-width: 10px;
+    widht */
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    justify-content: space-around;
+    margin: auto;
+}
+.blog_heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 50px;
+    padding-bottom: 20px;
+}
+
+.blog_body{
+    padding: 0px 50px;
+    padding-bottom: 30px;
+    
+}
+time{
+    color: grey;
+}
+.blog_edit{
+    display: flex;
+    justify-content: left;
+    padding: 50px;
+}
+.blog_edit a{
+    padding: 2px 15px;
+    border: 2px solid #ffc600;
+    margin-right: 20px;
+    color: rgb(42, 0, 116);
+    font-weight: 600;
+}
+.blog_edit a:hover{
+    background-color: rgba(252, 218, 0, 0.4);
+}
+
+/* --------------Create Page CSS----------- */
+
+.create_form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.create_form label{
+    display: block;
+    padding: 5px 50px;
+    color: rgb(42, 0, 116);
+    border: 2px solid #ffc600;
+    font-weight: 600;
+    width: fit-content;
+    margin: 10px 50px ;
+    background-color: rgba(252, 218, 0, 0.4);
+}
+.create_form input{
+    max-width: 800px;
+    width: 100%;
+    padding: 10px 50px;
+    margin: 15px 50px;
+    border: 2px solid black;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+.create_form select{
+    max-width: 800px;
+    width: 100%;
+    padding: 10px 50px;
+    margin: 15px 50px;
+    border: 2px solid black;
+    font-size: 1rem;
+    
+    
+}
+.create_form textarea{
+    max-width: 800px;
+    width: 100%;
+    padding: 10px 30px;
+    margin: 15px 50px;
+    border: 2px solid black;
+    font-size: 1rem;
+    
+}
+.create_form .submit{
+    width: fit-content;
+    padding: 2px 15px;
+    margin-right: 20px;
+    color: rgb(42, 0, 116);
+    border: 2px solid #ffc600;
+    font-weight: 600;
+}
+.create_form .submit:hover{
+    background-color: rgba(252, 218, 0, 0.4);
+}

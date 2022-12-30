@@ -1,22 +1,21 @@
-<html>
-    
-    
-    <body>
+
         {% extends 'base.html' %}
 
         {% block content %}
-            <article class="post">
-                {% if object.date %}
-                    <time class="date">
-                        {{ object.date }}
-                    </time>
-                {% endif %}
-                <h2>{{ object.title }}</h2>
-                <p>{{ object.body|linebreaksbr }}</p>
-                <a href="{% url 'post_update' pk=object.pk %}">✏️ Edit Post</a>
-                <a href="{% url 'post_delete' pk=object.pk %}">❌ Delete Post</a>
-            </article>
+            <div class="blog_content">
+                <div class="blog_heading">
+                    {% if object.date %}
+                        <h2 class="blog_title">{{ object.title }}</h2>
+                        <time class="date">
+                            {{ object.date }}
+                        </time>
+                    {% endif %}
+                </div>
+                <p class="blog_body">{{ object.body|linebreaksbr }}</p>
+                <div class="blog_edit">
+                    <a href="{% url 'post_update' pk=object.pk %}">✏️ Edit Post</a>
+                    <a href="{% url 'post_delete' pk=object.pk %}">🗑️ Delete Post</a>
+                </div>
+            </div>
         {% endblock %}
-    </body>
-    
-</html>
+ 
